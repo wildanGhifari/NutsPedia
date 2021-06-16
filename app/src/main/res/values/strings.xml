@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NutsPedia</string>
+    <string name="nuts_name">Nuts Name</string>
+    <string name="description">Description</string>
+    <string name="favorite">Favorite</string>
+    <string name="share">Share</string>
+    <string name="lihat_detail">Lihat Detail</string>
+</resources>
