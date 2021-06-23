@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showRecyclerCardView() {
         rvNuts.layoutManager = LinearLayoutManager(this)
-        val cardViewHeroAdapter = CardViewAdapter(list)
+        val cardViewHeroAdapter = ListViewAdapter(list)
         rvNuts.adapter = cardViewHeroAdapter
     }
 }
