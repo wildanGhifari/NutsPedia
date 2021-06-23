@@ -10,6 +10,21 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
 class ListViewAdapter(private val listNuts: ArrayList<Nuts>) : RecyclerView.Adapter<ListViewAdapter.ListViewHolder>(){
+    private lateinit var onItemClickCallback : OnItemClickCallback
+
+    interface OnItemClickCallback {
+        fun onItemClicked(item : Nuts)
+    }
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback){
+        this.onItemClickCallback = onItemClickCallback
+    }
+
+    inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
+        var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
+        var tvDesc: TextView = itemView.findViewById(R.id.tv_item_detail)
+    }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ListViewHolder {
         val view: View = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_listview_nuts, viewGroup, false)
@@ -26,15 +41,12 @@ class ListViewAdapter(private val listNuts: ArrayList<Nuts>) : RecyclerView.Adap
 
         holder.tvName.text = nuts.name
         holder.tvDesc.text = nuts.desc
+
+        holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(listNuts[position]) }
+
     }
 
     override fun getItemCount(): Int {
         return listNuts.size
-    }
-
-    inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
-        var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
-        var tvDesc: TextView = itemView.findViewById(R.id.tv_item_detail)
     }
 }

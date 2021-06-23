@@ -3,10 +3,11 @@ package me.wildan.nutspedia
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import me.wildan.nutspedia.Nuts
+import me.wildan.nutspedia.NutsData
+import me.wildan.nutspedia.ListViewAdapter
 
 class MainActivity : AppCompatActivity() {
     private lateinit var rvNuts: RecyclerView
@@ -20,12 +21,27 @@ class MainActivity : AppCompatActivity() {
         rvNuts.setHasFixedSize(true)
 
         list.addAll(NutsData.listData)
-        showRecyclerCardView()
+        showRecyclerListView()
     }
 
-    private fun showRecyclerCardView() {
+    private fun moveToDetail(nuts: Nuts) {
+        val moveIntent = Intent(this,DetailActivity::class.java)
+        moveIntent.putExtra(DetailActivity.EXTRA_NAME, nuts.name)
+        moveIntent.putExtra(DetailActivity.EXTRA_PHOTO, nuts.photo)
+        moveIntent.putExtra(DetailActivity.EXTRA_DESC, nuts.desc)
+        startActivity(moveIntent)
+    }
+
+    private fun showRecyclerListView() {
+        val listViewNutsAdapter = ListViewAdapter(list)
+
         rvNuts.layoutManager = LinearLayoutManager(this)
-        val cardViewHeroAdapter = ListViewAdapter(list)
-        rvNuts.adapter = cardViewHeroAdapter
+        rvNuts.adapter = listViewNutsAdapter
+
+        listViewNutsAdapter.setOnItemClickCallback(object : ListViewAdapter.OnItemClickCallback{
+            override fun onItemClicked(item : Nuts) {
+                moveToDetail(item)
+            }
+        })
     }
 }
