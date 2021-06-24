@@ -10,7 +10,7 @@ class DetailActivity : AppCompatActivity() {
     private lateinit var tvNameReceived : TextView
     private lateinit var tvDescReceived : TextView
 
-    private var title : String = "Detail Menu"
+    private var title : String = "Detail"
 
     companion object {
         const val EXTRA_DESC = "extra_desc"
