@@ -6,4 +6,17 @@
     <string name="share">Share</string>
     <string name="lihat_detail">Lihat Detail</string>
     <string name="nuts_image">Nuts Image</string>
+    <string name="email">wildghifari@gmail.com</string>
+    <string name="github">Link to Github</string>
+    <string name="dribbble">Link to Dribbble</string>
+    <string name="chatMe">Chat With Me</string>
+    <string name="WA">Link to WhatsApp</string>
+    <string name="about"><![CDATA[
+            Hi! My name is Wildan Ghifari, i am a Graphic Designer, UI/UX Designer and
+        Web Developer based in Jakarta. I have a working experience as a Grapihc and UI/UX Designer
+        for more than 4 years, one year as a Full-stack Developer. I've been freelancing for more
+        than 2 years. Let's make something great together.]]></string>
+    <string name="profile_name">Wildan Ghifari</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="position"><![CDATA[Web Designer & Developer]]></string>
 </resources>
