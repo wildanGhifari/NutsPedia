@@ -3,7 +3,7 @@ package me.wildan.nutspedia
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
-class Profile : AppCompatActivity() {
+class ProfileActivity : AppCompatActivity() {
     private var title : String = "About"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,5 +15,10 @@ class Profile : AppCompatActivity() {
     private fun setActionBarTitle(title: String) {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = title
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

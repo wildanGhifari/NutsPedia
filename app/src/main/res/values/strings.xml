@@ -11,12 +11,15 @@
     <string name="dribbble">Link to Dribbble</string>
     <string name="chatMe">Chat With Me</string>
     <string name="WA">Link to WhatsApp</string>
-    <string name="about"><![CDATA[
-            Hi! My name is Wildan Ghifari, i am a Graphic Designer, UI/UX Designer and
+    <string name="about">
+        Hi! My name is Wildan Ghifari, i am a Graphic Designer, UI/UX Designer and
         Web Developer based in Jakarta. I have a working experience as a Grapihc and UI/UX Designer
-        for more than 4 years, one year as a Full-stack Developer. I've been freelancing for more
-        than 2 years. Let's make something great together.]]></string>
+        for more than 4 years, one year as a Full-stack Developer. I\'ve been freelancing for more
+        than 2 years. Let\'s make something great together.
+    </string>
     <string name="profile_name">Wildan Ghifari</string>
     <string name="profile_picture">Profile Picture</string>
-    <string name="position"><![CDATA[Web Designer & Developer]]></string>
+    <string name="position">Web Designer &amp; Developer</string>
+    <string name="about_menu">About</string>
+    <string name="title_about">About</string>
 </resources>

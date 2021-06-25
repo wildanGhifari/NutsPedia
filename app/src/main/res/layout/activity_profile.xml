@@ -6,12 +6,15 @@
     android:layout_height="match_parent">
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,29 +26,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginVertical="24dp"
-                app:cardCornerRadius="25dp"
-                android:elevation="10dp">
+                app:cardCornerRadius="25dp">
 
                 <RelativeLayout
                     android:id="@+id/profileContainer"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="200dp">
 
                     <ImageView
                         android:id="@+id/profile_image"
                         android:layout_width="150dp"
                         android:layout_height="match_parent"
+                        android:contentDescription="@string/profile_picture"
                         android:scaleType="centerCrop"
-                        tools:src="@tools:sample/avatars"
-                        android:contentDescription="@string/profile_picture" />
+                        tools:src="@tools:sample/avatars" />
 
                     <RelativeLayout
                         android:id="@+id/profile_info"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toEndOf="@id/profile_image"
+                        android:layout_centerVertical="true"
                         android:layout_marginStart="16dp"
-                        android:layout_centerVertical="true">
+                        android:layout_toEndOf="@id/profile_image">
 
                         <TextView
                             android:id="@+id/tv_profileName"
@@ -61,48 +63,49 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/tv_profileName"
                             android:text="@string/email"
-                            android:textSize="12sp"/>
+                            android:textSize="12sp" />
 
-                        <androidx.cardview.widget.CardView
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/tv_profilePosition"
                             android:layout_marginTop="32dp"
-                            app:cardBackgroundColor="#FFF9C9"
-                            app:cardCornerRadius="16dp">
+                            android:orientation="horizontal">
 
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:paddingHorizontal="6dp">
+                            <ImageButton
+                                android:id="@+id/email"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginVertical="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:contentDescription="@string/email"
+                                android:scaleType="centerCrop"
+                                android:backgroundTint="@color/white"
+                                android:src="@drawable/envelope" />
 
-                                <ImageButton
-                                    android:id="@+id/email"
-                                    android:layout_width="48dp"
-                                    android:layout_height="48dp"
-                                    android:layout_marginHorizontal="6dp"
-                                    android:layout_marginVertical="12dp"
-                                    android:contentDescription="@string/email" />
+                            <ImageButton
+                                android:id="@+id/github"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginVertical="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:contentDescription="@string/github"
+                                android:scaleType="centerCrop"
+                                android:backgroundTint="@color/white"
+                                android:src="@drawable/github" />
 
-                                <ImageButton
-                                    android:id="@+id/github"
-                                    android:layout_width="48dp"
-                                    android:layout_height="48dp"
-                                    android:layout_marginHorizontal="6dp"
-                                    android:layout_marginVertical="12dp"
-                                    android:contentDescription="@string/github" />
+                            <ImageButton
+                                android:id="@+id/dribbble"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginVertical="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:contentDescription="@string/dribbble"
+                                android:scaleType="centerCrop"
+                                android:backgroundTint="@color/white"
+                                android:src="@drawable/dribbble"/>
 
-                                <ImageButton
-                                    android:id="@+id/dribbble"
-                                    android:layout_width="48dp"
-                                    android:layout_height="48dp"
-                                    android:layout_marginHorizontal="6dp"
-                                    android:layout_marginVertical="12dp"
-                                    android:contentDescription="@string/dribbble" />
-
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
+                        </LinearLayout>
                     </RelativeLayout>
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -123,19 +126,5 @@
                 android:background="?android:attr/listDivider" />
         </LinearLayout>
     </ScrollView>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
-        android:clickable="true"
-        android:contentDescription="@string/WA"
-        android:focusable="true"
-        app:backgroundTint="#D14D4D"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

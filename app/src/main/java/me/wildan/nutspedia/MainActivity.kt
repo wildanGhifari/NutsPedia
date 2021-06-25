@@ -3,11 +3,10 @@ package me.wildan.nutspedia
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import me.wildan.nutspedia.Nuts
-import me.wildan.nutspedia.NutsData
-import me.wildan.nutspedia.ListViewAdapter
 
 class MainActivity : AppCompatActivity() {
     private lateinit var rvNuts: RecyclerView
@@ -32,6 +31,16 @@ class MainActivity : AppCompatActivity() {
         startActivity(moveIntent)
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        setMode(item.itemId)
+        return super.onOptionsItemSelected(item)
+    }
+
     private fun showRecyclerListView() {
         val listViewNutsAdapter = ListViewAdapter(list)
 
@@ -43,5 +52,14 @@ class MainActivity : AppCompatActivity() {
                 moveToDetail(item)
             }
         })
+    }
+
+    private fun setMode(selectedMode: Int) {
+        when (selectedMode) {
+            R.id.about -> {
+                val moveIntent = Intent(this@MainActivity, ProfileActivity::class.java)
+                startActivity(moveIntent)
+            }
+        }
     }
 }
