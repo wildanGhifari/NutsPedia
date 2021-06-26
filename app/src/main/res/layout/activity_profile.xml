@@ -121,8 +121,156 @@
                 android:id="@+id/divider2"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginVertical="24dp"
                 android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/tv_subtitle_tool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="@string/tools_dev"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/TextStd.List"
+                        android:layout_height="20dp"
+                        android:text="@string/tools1" />
+
+                    <TextView
+                        style="@style/TextStd.List"
+                        android:layout_height="20dp"
+                        android:text="@string/tools6" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        style="@style/TextStd.List"
+                        android:layout_height="20dp"
+                        android:text="@string/tools2"/>
+                    <TextView
+                        style="@style/TextStd.List"
+                        android:layout_height="20dp"
+                        android:text="@string/tools7"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        style="@style/TextStd.List"
+                        android:layout_height="20dp"
+                        android:text="@string/tools3"/>
+                    <TextView
+                        style="@style/TextStd.List"
+                        android:layout_height="20dp"
+                        android:text="@string/tools8"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        style="@style/TextStd.List"
+                        android:layout_height="20dp"
+                        android:text="@string/tools4"/>
+                    <TextView
+                        style="@style/TextStd.List"
+                        android:layout_height="20dp"
+                        android:text="@string/tools9"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        style="@style/TextStd.List"
+                        android:layout_height="20dp"
+                        android:text="@string/tools5"/>
+                    <TextView
+                        style="@style/TextStd.List"
+                        android:layout_height="20dp"
+                        android:text="@string/tools10"/>
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/tv_subtitle_skill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="@string/skills_dev"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp">
+
+                <TableRow>
+                    <TextView
+                        style="@style/TextStd.List"
+                        android:layout_height="20dp"
+                        android:text="@string/skill1"/>
+
+                    <TextView
+                        style="@style/TextStd.List"
+                        android:layout_height="20dp"
+                        android:text="@string/skill6"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        style="@style/TextStd.List"
+                        android:layout_height="20dp"
+                        android:text="@string/skill2"/>
+
+                    <TextView
+                        style="@style/TextStd.List"
+                        android:layout_height="20dp"
+                        android:text="@string/skill7"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        style="@style/TextStd.List"
+                        android:layout_height="20dp"
+                        android:text="@string/skill3"/>
+
+                    <TextView
+                        style="@style/TextStd.List"
+                        android:layout_height="20dp"
+                        android:text="@string/skill8"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        style="@style/TextStd.List"
+                        android:layout_height="20dp"
+                        android:text="@string/skill4"/>
+
+                    <TextView
+                        style="@style/TextStd.List"
+                        android:layout_height="20dp"
+                        android:text="@string/skill9"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        style="@style/TextStd.List"
+                        android:layout_height="20dp"
+                        android:text="@string/skill5"/>
+
+                    <TextView
+                        style="@style/TextStd.List"
+                        android:layout_height="20dp"
+                        android:text="@string/skill10"/>
+                </TableRow>
+            </TableLayout>
+
         </LinearLayout>
     </ScrollView>
 
