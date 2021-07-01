@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="app_name">NutsPedia</string>
     <string name="nuts_name">Nuts Name</string>
     <string name="description">Description</string>
@@ -44,4 +44,6 @@
     <string name="skill8"><ul><li>HTML5/CSS3/JavaScript</li></ul></string>
     <string name="skill9"><ul><li>Bootstrap/Tailwind</li></ul></string>
     <string name="skill10"><ul><li>App Development</li></ul></string>
+    <string name="nutspedia">NutsPedia</string>
+    <string name="icon_nutspedia_for_splashscreen">icon NutsPedia for SplashScreen</string>
 </resources>
