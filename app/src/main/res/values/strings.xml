@@ -46,4 +46,5 @@
     <string name="skill10"><ul><li>App Development</li></ul></string>
     <string name="nutspedia">NutsPedia</string>
     <string name="icon_nutspedia_for_splashscreen">icon NutsPedia for SplashScreen</string>
+    <string name="nuts_picture">Nuts Picture</string>
 </resources>

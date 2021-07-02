@@ -1,8 +1,10 @@
 package me.wildan.nutspedia
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class DetailActivity : AppCompatActivity() {
@@ -35,6 +37,10 @@ class DetailActivity : AppCompatActivity() {
         tvNameReceived.text = nutsName
         tvDescReceived.text = nutsDesc
 
+        val btnShare: Button = findViewById(R.id.btn_share)
+        btnShare.setOnClickListener {
+            Toast.makeText(this, "Share" + nutsName, Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun setActionBarTitle(title: String) {
