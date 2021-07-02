@@ -3,6 +3,7 @@ package me.wildan.nutspedia
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 
@@ -31,6 +32,12 @@ class ProfileActivity : AppCompatActivity() {
         btnDribbble.setOnClickListener {
             val myDribbble = Intent(Intent.ACTION_VIEW, Uri.parse("https://dribbble.com/wildant"))
             startActivity(myDribbble)
+        }
+
+        val btnChat: Button = findViewById(R.id.btn_chat)
+        btnChat.setOnClickListener {
+            val myWhatsApp = Intent(Intent.ACTION_VIEW, Uri.parse("https://wa.link/y1fh9u"))
+            startActivity(myWhatsApp)
         }
     }
 

@@ -38,7 +38,7 @@
                         android:layout_height="match_parent"
                         android:contentDescription="@string/profile_picture"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/img_wildan" />
+                        android:src="@drawable/wildan" />
 
                     <RelativeLayout
                         android:id="@+id/profile_info"
